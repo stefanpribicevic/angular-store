@@ -1,0 +1,11 @@
+<div *ngIf="product">
+  <h1>{{product.name}}</h1>
+  <p>
+    <strong>Description:</strong> {{product.description}}
+  </p>
+  <div class="QuantityInput">
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" [(ngModel)]="quantity">
+    <button (click)="onAddToCart()">Add to cart</button>
+  </div>
+</div>

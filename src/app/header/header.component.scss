@@ -1,0 +1,38 @@
+@import '../main';
+
+.header {     
+    li {
+        @extend %li;
+        float: left;
+        background-color: $header-background-color;         
+        padding: 12px;
+
+        a {
+            color: $header-text;
+            text-decoration: none;        
+            font-family: $header-font-family;
+        }
+    }
+
+    li:hover {
+        background-color: $header-text;
+        cursor: pointer;
+        a {
+            color: $header-background-color;            
+            @include text-selection(none);
+        }
+    }
+
+    li:last-child {
+        float: right;
+    }
+
+    ul {
+        @extend %ul;
+        margin: 10px 0 0 0;
+        height: 49px;
+        background-color: $header-background-color;
+
+    } 
+
+}

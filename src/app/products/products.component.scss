@@ -1,0 +1,32 @@
+@import "../main";
+
+.Product:hover {
+    cursor: pointer;
+    background-color:#dbe9ff;
+}
+
+.Product {
+    @include text-selection(none);
+    border-bottom: 1px solid black;    
+    padding: 5px;
+
+    h3,p {
+        text-align: center;    
+    }
+
+    h3 {
+        font-family: $header-font-family;
+        color: $header-background-color;
+        margin-top: 15px;
+    }
+}
+
+.Product:first-child{
+    border-top: 1px solid black;
+}
+
+h1 {
+    @include text-selection(none);
+    @extend %header;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,27 @@
+@import "../../main";
+
+input {
+    width: 40px;
+}
+
+h1 {
+    @extend %header;
+    margin-bottom: 50px;
+}
+
+.QuantityInput, p {
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.QuantityInput {
+    label {
+        font-weight: bold;
+    }
+
+    label, input, button {
+        margin-right: 10px;
+    }
+
+
+}

@@ -1,0 +1,20 @@
+<div class="header">
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="/">Home </a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/cart">Cart</a>
+    </li>
+    <div *ngIf="username;else registerLoginLink">
+      <li>
+        <a>Hi, {{ username }}</a>
+      </li>
+    </div>
+    <ng-template #registerLoginLink>
+      <li routerLinkActive="active">
+        <a routerLink="/register-login">Register / Login</a>
+      </li>
+    </ng-template>
+  </ul>
+</div>
